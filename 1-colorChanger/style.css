@@ -18,6 +18,44 @@ span{
     border : solid black 2px;
     display: inline-block;
 }
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center align the items */
+    padding: 1rem 2rem; /* Add padding for spacing */
+    gap: 1rem; /* Space between the links */
+    background: linear-gradient(90deg, #f7f7f7, #e1e1e1); /* Gradient background */
+    border-bottom: solid 2px #bbb; /* Subtle bottom border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 8px; /* Slight rounding of edges */
+}
+
+nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: #444; /* Default link color */
+    padding: 0.75rem 1.5rem; /* Padding around the links */
+    border-radius: 5px; /* Rounded corners for links */
+    background-color: #fff; /* Background color for the links */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+nav a:hover {
+    background-color: #007bff; /* Change background color on hover */
+    color: #fff; /* White text color on hover */
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); /* Add shadow on hover */
+}
+
+nav a[aria-current="page"] {
+    background-color: #0056b3; /* Different background for active/current page link */
+    color: #fff; /* White text for active link */
+    box-shadow: 0 4px 10px rgba(0, 86, 179, 0.3); /* Add shadow to active link */
+}
+
+nav a[target="_blank"]::after {
+    content: " ↗"; /* Add an icon indicating the link opens in a new tab */
+    font-size: 0.8rem; /* Smaller icon size */
+}
+
 
 #grey{
     background-color: grey;
