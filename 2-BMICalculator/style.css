@@ -9,93 +9,119 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-
-/* Navigation bar styling */
-nav {
-    background-color: #007BFF;
-    padding: 1rem;
-    width: 100%;
-    text-align: center;
-    position: fixed;
-    top: 0;
+  }
+  
+  /* Updated Navigation bar styling */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center align the items */
+    padding: 1rem 2rem; /* Add padding for spacing */
+    gap: 1rem; /* Space between the links */
+    background: linear-gradient(
+      90deg,
+      #f7f7f7,
+      #e1e1e1
+    ); /* Gradient background */
+    border-bottom: solid 2px #bbb; /* Subtle bottom border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 8px; /* Slight rounding of edges */
+    width: 100%; /* Ensure the navbar spans full width */
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Align to the top */
     left: 0;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #ffdd57;
-}
-
-/* Container styling */
-.container {
+    z-index: 1000; /* Ensure the navbar is on top */
+  }
+  
+  nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: #444; /* Default link color */
+    padding: 0.75rem 1.5rem; /* Padding around the links */
+    border-radius: 5px; /* Rounded corners for links */
+    background-color: #fff; /* Background color for the links */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  }
+  
+  nav a:hover {
+    background-color: #007bff; /* Change background color on hover */
+    color: #fff; /* White text color on hover */
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); /* Add shadow on hover */
+  }
+  
+  nav a[aria-current='page'] {
+    background-color: #0056b3; /* Different background for active/current page link */
+    color: #fff; /* White text for active link */
+    box-shadow: 0 4px 10px rgba(0, 86, 179, 0.3); /* Add shadow to active link */
+  }
+  
+  nav a[target='_blank']::after {
+    content: ' ↗'; /* Add an icon indicating the link opens in a new tab */
+    font-size: 0.8rem; /* Smaller icon size */
+  }
+  
+  /* Container styling */
+  .container {
     background-color: white;
     border-radius: 10px;
     padding: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
-    margin-top: 100px;
+    margin-top: 120px; /* Increase margin to accommodate the fixed navbar */
     text-align: center;
-}
-
-/* Form and input styling */
-form p {
+  }
+  
+  /* Form and input styling */
+  form p {
     margin: 1rem 0;
     text-align: left;
-}
-
-label {
+  }
+  
+  label {
     font-weight: bold;
-}
-
-input[type="text"] {
+  }
+  
+  input[type='text'] {
     width: calc(100% - 20px);
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-button {
-    background-color: #007BFF;
+  }
+  
+  button {
+    background-color: #007bff;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background-color: #0056b3;
-}
-
-/* Result styling */
-#result {
+  }
+  
+  /* Result styling */
+  #result {
     margin-top: 1rem;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #007BFF;
-}
-
-/* Weight guide styling */
-#weight-guide {
+    color: #007bff;
+  }
+  
+  /* Weight guide styling */
+  #weight-guide {
     margin-top: 2rem;
     text-align: left;
-}
-
-#weight-guide h3 {
-    color: #007BFF;
-}
-
-#weight-guide p {
+  }
+  
+  #weight-guide h3 {
+    color: #007bff;
+  }
+  
+  #weight-guide p {
     margin: 0.5rem 0;
-}
+  }
+  
