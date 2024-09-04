@@ -1,0 +1,83 @@
+/* Style for the nav (already provided) */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    background: linear-gradient(90deg, #444, #222); /* Dark gradient background */
+    border-bottom: solid 2px #444; /* Darker border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+    border-radius: 12px; /* More rounded edges */
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff; /* Light link color */
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px; /* More rounded corners */
+    background-color: #333; /* Darker background for links */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  nav a:hover {
+    background-color: #0062cc; /* Bright blue on hover */
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 98, 204, 0.4); /* Stronger shadow on hover */
+  }
+  
+  nav a[aria-current='page'] {
+    background-color: #004085; /* Darker shade for the active link */
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 64, 133, 0.4);
+  }
+  
+  nav a[target='_blank']::after {
+    content: ' ↗';
+    font-size: 0.8rem;
+  }
+  
+  /* Additional Styles for the Digital Clock Page */
+  
+  /* Centering the content */
+  .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: #fff; /* Text color to match the nav */
+  }
+  
+  /* Styling the banner */
+  #banner {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #333; /* Matching link background */
+    border-radius: 8px; /* Consistent rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Consistent shadow */
+  }
+  
+  /* Styling the clock display */
+  #clock {
+    font-size: 3rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #444; /* Slightly darker background for the clock */
+    border-radius: 12px; /* Rounded corners matching the nav */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Consistent shadow */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for clock */
+  }
+  
+  /* Body background */
+  body {
+    background: linear-gradient(
+      180deg,
+      #222,
+      #000
+    ); /* Dark gradient background */
+    margin: 0;
+    font-family: Arial, sans-serif; /* Clean and modern font */
+  }
+  
